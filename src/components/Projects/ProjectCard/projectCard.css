@@ -1,0 +1,70 @@
+.p {
+  width: 30%;
+  height: 40vh;
+  margin: 20px 10px;
+  border: 2px solid rgb(243, 242, 242);
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-browser {
+  height: 20px;
+  background-color: rgb(243, 242, 242);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+}
+
+.p-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 3px;
+  background-color: white;
+}
+
+.p-img {
+  width: 100%;
+  transition: all 10s ease;
+}
+
+.p:hover .p-img {
+  transform: translateY(-100%);
+  transition: all 10s ease;
+}
+
+.btnContainer .p-btn {
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+.btnContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateX(-100%);
+  transition: transform 1s;
+}
+.p:hover .btnContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.603);
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 480px) {
+  .p {
+    width: 100%;
+    height: 50vh;
+  }
+}
